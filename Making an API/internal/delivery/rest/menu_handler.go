@@ -7,10 +7,10 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func (h *handler) GetMenu(e echo.Context) error {
+func (h *handler) GetMenuList(e echo.Context) error {
 	menuType := e.FormValue("menu_type")
 
-	menuData, err := h.restoUsecase.GetMenu(menuType)
+	menuData, err := h.restoUsecase.GetMenuList(menuType)
 	if err != nil {
 		fmt.Printf("Got error %s\n", err.Error())
 
